@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Rai Wajahat Nazir - Professional Web Developer and AI Learner">
+<meta name="keywords" content="Web Developer, AI, Portfolio, Website Development">
+<meta name="author" content="Rai Wajahat Nazir">
+
+<title>Rai Wajahat Nazir | Web Developer & AI Learner</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#f5f7fb;
+color:#172033;
+line-height:1.6;
+transition:0.3s;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:90%;
+max-width:1150px;
+margin:auto;
+}
+
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(10px);
+border-bottom:1px solid #e5e7eb;
+}
+
+.navbar{
+min-height:70px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+}
+
+.logo span{
+color:#2563eb;
+}
+
+.nav-links{
+display:flex;
+gap:22px;
+list-style:none;
+}
+
+.nav-links a{
+font-weight:bold;
+}
+
+.nav-links a:hover{
+color:#2563eb;
+}
+
+.menu-btn{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+.hero{
+padding:100px 0 80px;
+background:linear-gradient(135deg,#eef4ff,#fff);
+}
+
+.hero-content{
+display:grid;
+grid-template-columns:1.3fr .7fr;
+align-items:center;
+gap:50px;
+}
+
+.badge{
+display:inline-block;
+padding:8px 15px;
+background:#dbeafe;
+color:#1d4ed8;
+border-radius:30px;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:52px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#2563eb;
+}
+
+.hero p{
+font-size:19px;
+color:#5b6475;
+margin-bottom:30px;
+}
+
+.buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:13px 22px;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+border:none;
+transition:.3s;
+}
+
+.btn-primary{
+background:#2563eb;
+color:white;
+}
+
+.btn-primary:hover{
+background:#1d4ed8;
+transform:translateY(-2px);
+}
+
+.btn-outline{
+border:2px solid #2563eb;
+color:#2563eb;
+background:white;
+}
+
+.btn-outline:hover{
+background:#2563eb;
+color:white;
+}
+
+.profile-card{
+background:white;
+padding:30px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 20px 50px rgba(37,99,235,.15);
+}
+
+.avatar{
+width:180px;
+height:180px;
+border-radius:50%;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:55px;
+font-weight:bold;
+color:white;
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+border:7px solid #eff6ff;
+}
+
+section{
+padding:80px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:45px;
+}
+
+.section-title h2{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.section-title p{
+color:#667085;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.box{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+
+.box h3{
+margin-bottom:15px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.stat{
+background:white;
+padding:25px;
+text-align:center;
+border-radius:16px;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+
+.stat h3{
+font-size:32px;
+color:#2563eb;
+}
+
+.skills{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.skill{
+margin-bottom:20px;
+}
+
+.skill-top{
+display:flex;
+justify-content:space-between;
+margin-bottom:7px;
+font-weight:bold;
+}
+
+.progress{
+height:10px;
+background:#e5e7eb;
+border-radius:20px;
+overflow:hidden;
+}
+
+.progress span{
+display:block;
+height:100%;
+background:linear-gradient(90deg,#2563eb,#7c3aed);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.card{
+background:white;
+padding:28px;
+border-radius:18px;
+box-shadow:0 8px 30px rgba(0,0,0,.06);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-7px);
+box-shadow:0 15px 35px rgba(37,99,235,.13);
+}
+
+.card-icon{
+font-size:38px;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+color:#667085;
+margin-bottom:20px;
+}
+
+.workflow{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.step{
+background:white;
+padding:25px;
+border-radius:16px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+
+.number{
+width:45px;
+height:45px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#2563eb;
+color:white;
+border-radius:50%;
+margin:0 auto 15px;
+font-weight:bold;
+}
+
+.pricing{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.price-card{
+background:white;
+padding:30px;
+border-radius:18px;
+text-align:center;
+border:1px solid #e5e7eb;
+}
+
+.price-card.featured{
+border:2px solid #2563eb;
+transform:scale(1.03);
+}
+
+.price{
+font-size:35px;
+font-weight:bold;
+margin:20px 0;
+color:#2563eb;
+}
+
+.price-card ul{
+list-style:none;
+margin-bottom:25px;
+}
+
+.price-card li{
+margin:10px 0;
+}
+
+.faq{
+max-width:800px;
+margin:auto;
+}
+
+.faq-item{
+background:white;
+margin-bottom:12px;
+border-radius:12px;
+overflow:hidden;
+}
+
+.question{
+padding:18px;
+cursor:pointer;
+font-weight:bold;
+display:flex;
+justify-content:space-between;
+}
+
+.answer{
+display:none;
+padding:0 18px 18px;
+color:#667085;
+}
+
+.contact-section{
+background:#eef4ff;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:.8fr 1.2fr;
+gap:30px;
+}
+
+.contact-info{
+background:linear-gradient(135deg,#1d4ed8,#4338ca);
+color:white;
+padding:35px;
+border-radius:20px;
+}
+
+.contact-info p{
+margin:18px 0;
+}
+
+.contact-form{
+background:#fff;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 35px rgba(0,0,0,.07);
+}
+
+.form-group{
+margin-bottom:18px;
+}
+
+.form-group label{
+display:block;
+margin-bottom:7px;
+font-weight:bold;
+}
+
+.form-group input,
+.form-group textarea{
+width:100%;
+padding:13px;
+border:1px solid #d1d5db;
+border-radius:10px;
+outline:none;
+font-size:15px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+border-color:#2563eb;
+box-shadow:0 0 0 3px rgba(37,99,235,.1);
+}
+
+.form-group textarea{
+height:130px;
+resize:vertical;
+}
+
+footer{
+background:#111827;
+color:white;
+padding:30px 0;
+text-align:center;
+}
+
+footer p{
+color:#cbd5e1;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:55px;
+height:55px;
+border-radius:50%;
+background:#22c55e;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+box-shadow:0 8px 25px rgba(0,0,0,.2);
+z-index:999;
+}
+
+body.dark{
+background:#0f172a;
+color:#e5e7eb;
+}
+
+body.dark nav{
+background:rgba(15,23,42,.95);
+border-color:#263244;
+}
+
+body.dark .hero{
+background:linear-gradient(135deg,#111c35,#0f172a);
+}
+
+body.dark .hero p,
+body.dark .section-title p,
+body.dark .card p{
+color:#aeb8c8;
+}
+
+body.dark .box,
+body.dark .card,
+body.dark .stat,
+body.dark .step,
+body.dark .price-card,
+body.dark .faq-item{
+background:#1e293b;
+color:#e5e7eb;
+}
+
+body.dark .contact-section{
+background:#172033;
+}
+
+body.dark .contact-form{
+background:#1e293b;
+color:white;
+}
+
+body.dark .btn-outline{
+background:transparent;
+color:#60a5fa;
+}
+
+body.dark .form-group input,
+body.dark .form-group textarea{
+background:#0f172a;
+color:white;
+border-color:#334155;
+}
+
+.theme-btn{
+border:none;
+background:#2563eb;
+color:white;
+padding:9px 13px;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+}
+
+@media(max-width:900px){
+
+.nav-links{
+display:none;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:white;
+flex-direction:column;
+padding:20px;
+border-bottom:1px solid #ddd;
+}
+
+body.dark .nav-links{
+background:#0f172a;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.menu-btn{
+display:inline;
+}
+
+.hero-content,
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.hero{
+padding:70px 0;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.cards,
+.pricing{
+grid-template-columns:1fr 1fr;
+}
+
+.stats{
+grid-template-columns:1fr 1fr;
+}
+
+.workflow{
+grid-template-columns:1fr 1fr;
+}
+
+.skills{
+grid-template-columns:1fr;
+}
+}
+
+@media(max-width:600px){
+
+.container{
+width:92%;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.cards,
+.pricing,
+.stats,
+.workflow{
+grid-template-columns:1fr;
+}
+
+.price-card.featured{
+transform:none;
+}
+
+.section-title h2{
+font-size:30px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container navbar">
+
+<div class="logo">
+Rai <span>Wajahat</span>
+</div>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<div>
+<button class="theme-btn" onclick="toggleDark()">🌙</button>
+<span class="menu-btn" onclick="toggleMenu()">☰</span>
+</div>
+
+</div>
+</nav>
+
+<section class="hero" id="home">
+
+<div class="container hero-content">
+
+<div>
+
+<span class="badge">Available for Projects</span>
+
+<h1>
+Hi, I'm <span>Rai Wajahat Nazir</span>
+</h1>
+
+<h2>
+Web Developer & AI Learner
+</h2>
+
+<p>
+I build modern, responsive and user-friendly websites
+with the help of Web Development, AI tools and problem-solving.
+</p>
+
+<div class="buttons">
+
+<a href="#projects" class="btn btn-primary">
+View My Work
+</a>
+
+<a href="#contact" class="btn btn-outline">
+Hire Me
+</a>
+
+</div>
+
+</div>
+
+<div class="profile-card">
+
+<div class="avatar">
+RW
+</div>
+
+<h2 style="margin-top:20px;">
+Rai Wajahat Nazir
+</h2>
+
+<p>
+Web Development • AI • Digital Solutions
+</p>
+
+</div>
+
+</div>
+</section>
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<h2>About Me</h2>
+<p>Who I am and what I do</p>
+</div>
+
+<div class="about-grid">
+
+<div class="box">
+
+<h3>My Journey</h3>
+
+<p>
+I am learning modern Web Development with a practical,
+project-based approach. My goal is to create useful digital
+solutions for individuals, businesses and organizations.
+</p>
+
+<br>
+
+<p>
+I combine Web Development with AI tools to work faster,
+solve problems and build better products.
+</p>
+
+</div>
+
+<div class="box">
+
+<h3>My Mission</h3>
+
+<p>
+My mission is simple: understand a real problem,
+design a useful solution, build it professionally,
+and deliver a website or web application that creates value.
+</p>
+
+<br>
+
+<p>
+<strong>Learn → Build → Improve → Deliver</strong>
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>Professional Dashboard</h2>
+<p>My current development journey</p>
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h3>6+</h3>
+<p>Months Learning Plan</p>
+</div>
+
+<div class="stat">
+<h3>10+</h3>
+<p>Project Ideas</p>
+</div>
+
+<div class="stat">
+<h3>24/7</h3>
+<p>Learning Mindset</p>
+</div>
+
+<div class="stat">
+<h3>AI+</h3>
+<p>Modern Workflow</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="skills">
+
+<div class="container">
+
+<div class="section-title">
+<h2>My Skills</h2>
+<p>Technologies and abilities I am developing</p>
+</div>
+
+<div class="skills">
+
+<div class="box">
+
+<div class="skill">
+
+<div class="skill-top">
+<span>HTML</span>
+<span>90%</span>
+</div>
+
+<div class="progress">
+<span style="width:90%"></span>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-top">
+<span>CSS</span>
+<span>80%</span>
+</div>
+
+<div class="progress">
+<span style="width:80%"></span>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-top">
+<span>JavaScript</span>
+<span>60%</span>
+</div>
+
+<div class="progress">
+<span style="width:60%"></span>
+</div>
+
+</div>
+
+</div>
+
+<div class="box">
+
+<div class="skill">
+
+<div class="skill-top">
+<span>Responsive Design</span>
+<span>80%</span>
+</div>
+
+<div class="progress">
+<span style="width:80%"></span>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-top">
+<span>AI-Assisted Development</span>
+<span>75%</span>
+</div>
+
+<div class="progress">
+<span style="width:75%"></span>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-top">
+<span>Problem Solving</span>
+<span>75%</span>
+</div>
+
+<div class="progress">
+<span style="width:75%"></span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+<h2>My Services</h2>
+<p>Digital solutions for individuals and businesses</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-icon">🌐</div>
+<h3>Business Website</h3>
+<p>
+Professional responsive websites for businesses,
+shops, academies and organizations.
+</p>
+<a href="#contact" class="btn btn-primary">Discuss Project</a>
+</div>
+
+<div class="card">
+<div class="card-icon">💼</div>
+<h3>Portfolio Website</h3>
+<p>
+Modern personal portfolio websites for professionals,
+students and freelancers.
+</p>
+<a href="#contact" class="btn btn-primary">Discuss Project</a>
+</div>
+
+<div class="card">
+<div class="card-icon">🤖</div>
+<h3>AI Solutions</h3>
+<p>
+AI-assisted websites, tools and automation concepts
+for modern digital workflows.
+</p>
+<a href="#contact" class="btn btn-primary">Discuss Project</a>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Featured Projects</h2>
+<p>Examples of digital products I can build</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-icon">🧮</div>
+
+<h3>Smart Calculator</h3>
+
+<p>
+Interactive calculator with multiple operations
+and responsive design.
+</p>
+
+<button class="btn btn-primary"
+onclick="calculator()">
+Open Demo
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">📊</div>
+
+<h3>Expense Tracker</h3>
+
+<p>
+A simple web application concept for tracking
+income and expenses.
+</p>
+
+<button class="btn btn-primary"
+onclick="projectMessage('Expense Tracker')">
+View Project
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">🏫</div>
+
+<h3>Academy Management</h3>
+
+<p>
+A future web application concept for students,
+teachers, fees and academic records.
+</p>
+
+<button class="btn btn-primary"
+onclick="projectMessage('Academy Management System')">
+View Project
+</button>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>How I Work</h2>
+<p>A simple professional workflow</p>
+</div>
+
+<div class="workflow">
+
+<div class="step">
+<div class="number">1</div>
+<h3>Understand</h3>
+<p>Understand your business and requirements.</p>
+</div>
+
+<div class="step">
+<div class="number">2</div>
+<h3>Plan</h3>
+<p>Plan the structure, design and features.</p>
+</div>
+
+<div class="step">
+<div class="number">3</div>
+<h3>Build</h3>
+<p>Develop and test the website or application.</p>
+</div>
+
+<div class="step">
+<div class="number">4</div>
+<h3>Deliver</h3>
+<p>Launch the final product and provide support.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="pricing">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Starter Packages</h2>
+<p>Example packages — final price depends on project requirements</p>
+</div>
+
+<div class="pricing">
+
+<div class="price-card">
+
+<h3>Basic</h3>
+
+<div class="price">$50+</div>
+
+<ul>
+<li>✓ 1 Page Website</li>
+<li>✓ Responsive Design</li>
+<li>✓ Basic Contact Section</li>
+<li>✓ Basic Support</li>
+</ul>
+
+<a href="#contact" class="btn btn-primary">
+Choose
+</a>
+
+</div>
+
+<div class="price-card featured">
+
+<h3>Professional</h3>
+
+<div class="price">$100+</div>
+
+<ul>
+<li>✓ Multi-Section Website</li>
+<li>✓ Mobile Responsive</li>
+<li>✓ Modern UI</li>
+<li>✓ Basic JavaScript</li>
+<li>✓ Deployment Support</li>
+</ul>
+
+<a href="#contact" class="btn btn-primary">
+Choose
+</a>
+
+</div>
+
+<div class="price-card">
+
+<h3>Custom</h3>
+
+<div class="price">Custom</div>
+
+<ul>
+<li>✓ Web Application</li>
+<li>✓ Advanced Features</li>
+<li>✓ API Integration</li>
+<li>✓ AI Features</li>
+<li>✓ Custom Requirements</li>
+</ul>
+
+<a href="#contact" class="btn btn-primary">
+Discuss
+</a>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>Frequently Asked Questions</h2>
+<p>Common questions</p>
+</div>
+
+<div class="faq">
+
+<div class="faq-item">
+
+<div class="question" onclick="toggleFAQ(this)">
+Can you build a website for my business?
+<span>+</span>
+</div>
+
+<div class="answer">
+Yes. A website can be designed according to your
+business, services, customers and requirements.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="question" onclick="toggleFAQ(this)">
+Will the website work on mobile?
+<span>+</span>
+</div>
+
+<div class="answer">
+Yes. The website is designed to be responsive,
+meaning it can adjust to mobile, tablet and desktop screens.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="question" onclick="toggleFAQ(this)">
+Can AI be added to a website?
+<span>+</span>
+</div>
+
+<div class="answer">
+Yes. AI features such as chat assistants, automation
+and intelligent tools can be added depending on the project.
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="contact-section" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Let's Work Together</h2>
+
+<p>
+Have a project idea? Let's discuss it.
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-info">
+
+<h2>Contact Me</h2>
+
+<p>📧 Email: your-email@example.com</p>
+
+<p>📱 WhatsApp: Your Number</p>
+
+<p>🌍 Available for Remote Projects</p>
+
+<br>
+
+<p>
+Tell me about your idea, business or website
+requirement. I'll help you understand the best solution.
+</p>
+
+</div>
+
+<div class="contact-form">
+
+<form onsubmit="sendMessage(event)">
+
+<div class="form-group">
+
+<label>Your Name</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Email</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Project Details</label>
+
+<textarea
+id="message"
+placeholder="Tell me about your project..."
+required></textarea>
+
+</div>
+
+<button
+type="submit"
+class="btn btn-primary">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+
+<div class="container">
+
+<h3>Rai Wajahat Nazir</h3>
+
+<p>
+Web Developer • AI Learner • Digital Problem Solver
+</p>
+
+<p style="margin-top:10px;">
+© 2026 Rai Wajahat Nazir. All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
+
+<a
+class="whatsapp"
+href="#contact"
+title="Contact Me">
+
+💬
+
+</a>
+
+<script>
+
+function toggleMenu(){
+
+document
+.getElementById("navLinks")
+.classList
+.toggle("active");
+
+}
+
+function toggleDark(){
+
+document
+.body
+.classList
+.toggle("dark");
+
+}
+
+function toggleFAQ(element){
+
+let answer =
+element.nextElementSibling;
+
+if(answer.style.display === "block"){
+
+answer.style.display="none";
+
+element.querySelector("span").textContent="+";
+
+}else{
+
+answer.style.display="block";
+
+element.querySelector("span").textContent="−";
+
+}
+
+}
+
+function projectMessage(project){
+
+alert(
+project +
+" demo is being prepared. This project can be developed as a real web application."
+);
+
+}
+
+function calculator(){
+
+let a =
+prompt("Enter first number:");
+
+let b =
+prompt("Enter second number:");
+
+if(a === null || b === null){
+
+return;
+
+}
+
+a = Number(a);
+b = Number(b);
+
+let result = a + b;
+
+alert(
+"Addition Result: " + result
+);
+
+}
+
+function sendMessage(event){
+
+event.preventDefault();
+
+let name =
+document.getElementById("name").value;
+
+let email =
+document.getElementById("email").value;
+
+let message =
+document.getElementById("message").value;
+
+if(
+name.trim()==="" ||
+email.trim()==="" ||
+message.trim()===""
+){
+
+alert("Please complete all fields.");
+
+return;
+
+}
+
+alert(
+"Thank you " +
+name +
+"! Your message has been prepared successfully."
+);
+
+}
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+link.addEventListener("click",function(){
+
+document
+.getElementById("navLinks")
+.classList
+.remove("active");
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
