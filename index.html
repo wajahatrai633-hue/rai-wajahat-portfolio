@@ -288,8 +288,13 @@
             height: 190px;
             margin: auto;
             border-radius: 50%;
-            object-fit: cover;
-            display: block;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 60px;
+            font-weight: bold;
             border: 7px solid white;
             box-shadow: var(--shadow);
         }
@@ -403,22 +408,17 @@
             font-weight: bold;
         }
 
-        .skill-bar {
-            width: 100%;
+        .bar {
             height: 10px;
             background: #e2e8f0;
             border-radius: 20px;
             overflow: hidden;
         }
 
-        .skill-fill {
+        .fill {
             height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
             border-radius: 20px;
-            background: linear-gradient(
-                90deg,
-                var(--primary),
-                var(--secondary)
-            );
         }
 
         /* SERVICES */
@@ -431,7 +431,7 @@
 
         .service {
             background: white;
-            padding: 30px 22px;
+            padding: 28px;
             border-radius: 18px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
@@ -439,11 +439,11 @@
         }
 
         .service:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
         }
 
         .service-icon {
-            font-size: 38px;
+            font-size: 35px;
             margin-bottom: 15px;
         }
 
@@ -452,17 +452,12 @@
             margin-bottom: 10px;
         }
 
-        .service p {
-            color: #64748b;
-            font-size: 14px;
-        }
-
         /* PROJECTS */
 
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 22px;
         }
 
         .project {
@@ -474,67 +469,60 @@
         }
 
         .project-top {
-            padding: 28px;
-            background: linear-gradient(
-                135deg,
-                rgba(37,99,235,0.12),
-                rgba(124,58,237,0.12)
-            );
-            font-size: 42px;
+            padding: 30px;
+            background: linear-gradient(135deg, #dbeafe, #ede9fe);
         }
 
-        .project-content {
+        .project-top h3 {
+            color: var(--dark);
+            font-size: 21px;
+        }
+
+        .project-body {
             padding: 25px;
         }
 
-        .project h3 {
-            color: var(--dark);
-            margin-bottom: 10px;
+        .project-body p {
+            margin-bottom: 15px;
         }
 
-        .project p {
-            color: #64748b;
-            font-size: 14px;
-            margin-bottom: 18px;
+        .tag {
+            display: inline-block;
+            background: #eff6ff;
+            color: #1d4ed8;
+            padding: 4px 9px;
+            border-radius: 6px;
+            font-size: 12px;
+            margin: 3px;
         }
 
         /* WORKFLOW */
 
         .workflow {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
         }
 
         .step {
             background: white;
-            padding: 25px;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
+            padding: 25px 15px;
             text-align: center;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
         }
 
         .step-number {
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
+            margin: auto auto 12px;
             border-radius: 50%;
             background: var(--primary);
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 15px;
             font-weight: bold;
-        }
-
-        .step h3 {
-            color: var(--dark);
-            margin-bottom: 8px;
-        }
-
-        .step p {
-            color: #64748b;
-            font-size: 14px;
         }
 
         /* PRICING */
@@ -548,7 +536,7 @@
         .price-card {
             background: white;
             padding: 30px;
-            border-radius: 18px;
+            border-radius: 20px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
         }
@@ -556,11 +544,6 @@
         .price-card.featured {
             border: 2px solid var(--primary);
             transform: translateY(-5px);
-        }
-
-        .price-card h3 {
-            color: var(--dark);
-            margin-bottom: 10px;
         }
 
         .price {
@@ -572,12 +555,11 @@
 
         .price-card ul {
             list-style: none;
-            margin: 20px 0;
+            margin-bottom: 20px;
         }
 
         .price-card li {
             padding: 7px 0;
-            border-bottom: 1px solid var(--border);
         }
 
         /* FAQ */
@@ -597,26 +579,23 @@
 
         .faq-question {
             width: 100%;
+            padding: 18px;
             border: none;
             background: white;
-            color: var(--dark);
-            padding: 18px 20px;
             text-align: left;
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            color: var(--dark);
         }
 
         .faq-answer {
             display: none;
-            padding: 0 20px 20px;
+            padding: 0 18px 18px;
             color: #64748b;
         }
 
-        .faq-item.active .faq-answer {
+        .faq-answer.show {
             display: block;
         }
 
@@ -633,37 +612,32 @@
             padding: 30px;
             border-radius: 18px;
             box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-        }
-
-        .contact-box h3 {
-            color: var(--dark);
-            margin-bottom: 15px;
         }
 
         .contact-item {
-            padding: 12px 0;
+            padding: 15px 0;
             border-bottom: 1px solid var(--border);
         }
 
         .contact-item strong {
+            display: block;
             color: var(--dark);
-        }
-
-        form {
-            display: grid;
-            gap: 15px;
         }
 
         form input,
         form textarea {
             width: 100%;
-            padding: 13px 15px;
+            padding: 13px;
+            margin-bottom: 14px;
             border: 1px solid var(--border);
-            border-radius: 9px;
-            font-family: inherit;
+            border-radius: 8px;
             font-size: 15px;
             outline: none;
+        }
+
+        form textarea {
+            min-height: 140px;
+            resize: vertical;
         }
 
         form input:focus,
@@ -671,9 +645,18 @@
             border-color: var(--primary);
         }
 
-        form textarea {
-            min-height: 150px;
-            resize: vertical;
+        /* FOOTER */
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: #cbd5e1;
+            margin: 5px 0;
         }
 
         /* WHATSAPP */
@@ -693,19 +676,6 @@
             font-size: 25px;
             box-shadow: var(--shadow);
             z-index: 999;
-        }
-
-        /* FOOTER */
-
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 30px 15px;
-        }
-
-        footer p {
-            margin: 5px 0;
         }
 
         /* DARK MODE */
@@ -813,6 +783,7 @@
             .profile-photo {
                 width: 150px;
                 height: 150px;
+                font-size: 45px;
             }
         }
 
@@ -873,4 +844,17 @@
                     Web Developer | AI-Assisted Developer | Digital Solutions
                 </h2>
 
-        
+                <p>
+                    I build professional, responsive and user-friendly websites
+                    using modern web technologies and AI-assisted development.
+                    My goal is to turn ideas into practical digital solutions.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        View My Work
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+  
