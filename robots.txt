@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wajahatrai633-hue.github.io/rai-wajahat-portfolio/sitemap.xml
