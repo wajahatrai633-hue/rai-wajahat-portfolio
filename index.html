@@ -1,1340 +1,860 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Muhammad Wajahat Nazir | Web Developer & AI Solutions</title>
-
-<meta name="description" content="Muhammad Wajahat Nazir - Web Developer, AI-Assisted Developer and Digital Solutions professional from Faisalabad, Pakistan.">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, sans-serif;
-    line-height:1.6;
-    background:#f7f9fc;
-    color:#172033;
-}
-
-body.dark{
-    background:#0f172a;
-    color:#e5e7eb;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-.container{
-    width:90%;
-    max-width:1150px;
-    margin:auto;
-}
-
-/* NAVBAR */
-
-nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#ffffff;
-    box-shadow:0 2px 12px rgba(0,0,0,.08);
-}
-
-body.dark nav{
-    background:#111827;
-}
-
-.nav-inner{
-    min-height:70px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-}
-
-.logo{
-    font-size:24px;
-    font-weight:bold;
-}
-
-.logo span{
-    color:#2563eb;
-}
-
-.nav-links{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.nav-links a{
-    font-weight:600;
-    font-size:14px;
-}
-
-.nav-links a:hover{
-    color:#2563eb;
-}
-
-.theme-btn{
-    border:0;
-    background:#2563eb;
-    color:white;
-    padding:9px 13px;
-    border-radius:8px;
-    cursor:pointer;
-}
-
-/* HERO */
-
-.hero{
-    padding:90px 0;
-    background:linear-gradient(135deg,#eaf2ff,#ffffff);
-}
-
-body.dark .hero{
-    background:linear-gradient(135deg,#111827,#172554);
-}
-
-.hero-content{
-    display:grid;
-    grid-template-columns:1fr 320px;
-    align-items:center;
-    gap:50px;
-}
-
-.badge{
-    display:inline-block;
-    background:#dbeafe;
-    color:#1d4ed8;
-    padding:7px 14px;
-    border-radius:30px;
-    font-weight:bold;
-    margin-bottom:18px;
-}
-
-body.dark .badge{
-    background:#1e3a8a;
-    color:#dbeafe;
-}
-
-.hero h1{
-    font-size:52px;
-    line-height:1.1;
-    margin-bottom:15px;
-}
-
-.hero h1 span{
-    color:#2563eb;
-}
-
-.hero h2{
-    color:#475569;
-    margin-bottom:18px;
-}
-
-body.dark .hero h2{
-    color:#cbd5e1;
-}
-
-.hero p{
-    max-width:650px;
-    font-size:18px;
-    margin-bottom:25px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:12px 20px;
-    border-radius:8px;
-    font-weight:bold;
-    border:2px solid #2563eb;
-}
-
-.btn-primary{
-    background:#2563eb;
-    color:white;
-}
-
-.btn-outline{
-    color:#2563eb;
-}
-
-.profile{
-    width:280px;
-    height:280px;
-    border-radius:50%;
-    background:linear-gradient(135deg,#2563eb,#7c3aed);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:75px;
-    font-weight:bold;
-    margin:auto;
-    box-shadow:0 20px 50px rgba(37,99,235,.3);
-}
-
-/* SECTIONS */
-
-section{
-    padding:75px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:45px;
-}
-
-.section-title h2{
-    font-size:35px;
-    margin-bottom:8px;
-}
-
-.section-title p{
-    color:#64748b;
-}
-
-body.dark .section-title p{
-    color:#94a3b8;
-}
-
-/* ABOUT */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:35px;
-}
-
-.card{
-    background:white;
-    padding:28px;
-    border-radius:15px;
-    box-shadow:0 8px 25px rgba(0,0,0,.07);
-}
-
-body.dark .card{
-    background:#1e293b;
-}
-
-.info-list{
-    list-style:none;
-}
-
-.info-list li{
-    padding:9px 0;
-    border-bottom:1px solid #e5e7eb;
-}
-
-body.dark .info-list li{
-    border-bottom:1px solid #334155;
-}
-
-.info-list strong{
-    color:#2563eb;
-}
-
-/* STATS */
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.stat{
-    text-align:center;
-    padding:25px;
-    background:white;
-    border-radius:15px;
-    box-shadow:0 8px 25px rgba(0,0,0,.06);
-}
-
-body.dark .stat{
-    background:#1e293b;
-}
-
-.stat h3{
-    font-size:35px;
-    color:#2563eb;
-}
-
-/* SKILLS */
-
-.skills-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-}
-
-.skill{
-    margin-bottom:20px;
-}
-
-.skill-top{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:7px;
-    font-weight:bold;
-}
-
-.skill-bar{
-    height:10px;
-    background:#e2e8f0;
-    border-radius:20px;
-    overflow:hidden;
-}
-
-.skill-fill{
-    height:100%;
-    background:#2563eb;
-}
-
-/* SERVICES / PROJECTS */
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.icon{
-    font-size:35px;
-    margin-bottom:12px;
-}
-
-.card h3{
-    margin-bottom:10px;
-}
-
-/* WORKFLOW */
-
-.workflow{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
-
-.step{
-    text-align:center;
-    padding:25px;
-    background:#eff6ff;
-    border-radius:14px;
-}
-
-body.dark .step{
-    background:#172554;
-}
-
-.step-number{
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    background:#2563eb;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 15px;
-    font-weight:bold;
-}
-
-/* PRICING */
-
-.price{
-    font-size:30px;
-    color:#2563eb;
-    font-weight:bold;
-    margin:15px 0;
-}
-
-.price-card ul{
-    list-style:none;
-}
-
-.price-card li{
-    padding:7px 0;
-}
-
-/* FAQ */
-
-.faq-item{
-    margin-bottom:12px;
-}
-
-.faq-question{
-    width:100%;
-    padding:17px;
-    text-align:left;
-    border:0;
-    background:#eaf2ff;
-    font-weight:bold;
-    cursor:pointer;
-    border-radius:8px;
-}
-
-body.dark .faq-question{
-    background:#1e293b;
-    color:white;
-}
-
-.faq-answer{
-    display:none;
-    padding:15px;
-}
-
-.faq-answer.show{
-    display:block;
-}
-
-/* CONTACT */
-
-.contact-section{
-    background:#eef4ff;
-}
-
-body.dark .contact-section{
-    background:#172033;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-}
-
-.contact-form{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-}
-
-body.dark .contact-form{
-    background:#1e293b;
-}
-
-input,
-textarea{
-    width:100%;
-    padding:13px;
-    margin-bottom:14px;
-    border:1px solid #cbd5e1;
-    border-radius:7px;
-    font-size:15px;
-}
-
-textarea{
-    min-height:130px;
-    resize:vertical;
-}
-
-.contact-info{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-
-.contact-box{
-    padding:20px;
-    background:white;
-    border-radius:12px;
-}
-
-body.dark .contact-box{
-    background:#1e293b;
-}
-
-/* FOOTER */
-
-footer{
-    padding:30px;
-    text-align:center;
-    background:#111827;
-    color:white;
-}
-
-.social{
-    margin-top:12px;
-}
-
-.social a{
-    margin:0 7px;
-    color:#93c5fd;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    background:#16a34a;
-    color:white;
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:26px;
-    box-shadow:0 8px 25px rgba(0,0,0,.2);
-    z-index:999;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:850px){
-
-    .hero-content,
-    .about-grid,
-    .contact-grid{
-        grid-template-columns:1fr;
+
+    <!-- =========================
+         BASIC SEO
+    ========================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Muhammad Wajahat Nazir | Web Developer & AI-Assisted Developer</title>
+
+    <meta name="description"
+        content="Muhammad Wajahat Nazir is a Web Developer and AI-Assisted Developer from Faisalabad, Pakistan, building professional websites, web tools and digital solutions.">
+
+    <meta name="keywords"
+        content="Muhammad Wajahat Nazir, Web Developer Pakistan, Web Developer Faisalabad, AI Developer Pakistan, AI-Assisted Developer, Website Developer, Portfolio Website, Digital Solutions">
+
+    <meta name="author" content="Muhammad Wajahat Nazir">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+        href="https://wajahatrai633-hue.github.io/rai-wajahat-portfolio/">
+
+    <!-- =========================
+         OPEN GRAPH
+    ========================== -->
+
+    <meta property="og:title"
+        content="Muhammad Wajahat Nazir | Web Developer">
+
+    <meta property="og:description"
+        content="Professional web development, AI-assisted development and digital solutions.">
+
+    <meta property="og:url"
+        content="https://wajahatrai633-hue.github.io/rai-wajahat-portfolio/">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:site_name"
+        content="Muhammad Wajahat Nazir">
+
+    <!-- =========================
+         TWITTER / X
+    ========================== -->
+
+    <meta name="twitter:card" content="summary">
+
+    <meta name="twitter:title"
+        content="Muhammad Wajahat Nazir | Web Developer">
+
+    <meta name="twitter:description"
+        content="Web development, AI-assisted development and digital solutions.">
+
+    <!-- =========================
+         PERSON STRUCTURED DATA
+    ========================== -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Muhammad Wajahat Nazir",
+        "jobTitle": "Web Developer & AI-Assisted Developer",
+        "url": "https://wajahatrai633-hue.github.io/rai-wajahat-portfolio/",
+        "email": "mailto:raimuhammadwajahatnazir@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Faisalabad",
+            "addressCountry": "PK"
+        },
+        "knowsAbout": [
+            "Web Development",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Responsive Web Design",
+            "AI-Assisted Development"
+        ]
     }
+    </script>
 
-    .hero{
-        text-align:center;
-    }
+    <!-- =========================
+         STYLING
+    ========================== -->
 
-    .hero p{
-        margin-left:auto;
-        margin-right:auto;
-    }
+    <style>
 
-    .hero-buttons{
-        justify-content:center;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-    .grid{
-        grid-template-columns:1fr 1fr;
-    }
+        :root {
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --dark: #0f172a;
+            --text: #334155;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --success: #16a34a;
+            --shadow: 0 10px 30px rgba(15, 23, 42, 0.10);
+        }
 
-    .stats{
-        grid-template-columns:1fr 1fr;
-    }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+        }
 
-    .workflow{
-        grid-template-columns:1fr 1fr;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    .nav-inner{
-        flex-direction:column;
-        padding:15px 0;
-    }
-}
+        img {
+            max-width: 100%;
+        }
 
-@media(max-width:550px){
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
 
-    .hero h1{
-        font-size:38px;
-    }
+        /* NAVBAR */
 
-    .grid,
-    .skills-grid,
-    .stats,
-    .workflow{
-        grid-template-columns:1fr;
-    }
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
 
-    .profile{
-        width:220px;
-        height:220px;
-        font-size:60px;
-    }
+        .nav-container {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
 
-    .nav-links{
-        justify-content:center;
-    }
-}
-</style>
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 22px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .theme-btn {
+            border: none;
+            background: var(--dark);
+            color: white;
+            padding: 9px 13px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at top right, rgba(37,99,235,0.15), transparent 35%),
+                radial-gradient(circle at bottom left, rgba(124,58,237,0.12), transparent 35%);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 7px 14px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 68px);
+            line-height: 1.1;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero h2 {
+            font-size: 22px;
+            margin-bottom: 18px;
+            color: #475569;
+        }
+
+        .hero p {
+            font-size: 17px;
+            max-width: 650px;
+            margin-bottom: 28px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 9px;
+            font-weight: bold;
+            border: 2px solid var(--primary);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .btn-outline {
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* PROFILE */
+
+        .profile-card {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 190px;
+            height: 190px;
+            margin: auto;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 60px;
+            font-weight: bold;
+            border: 7px solid white;
+            box-shadow: var(--shadow);
+        }
+
+        .profile-card h3 {
+            margin-top: 20px;
+            color: var(--dark);
+            font-size: 24px;
+        }
+
+        .profile-card p {
+            color: #64748b;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #64748b;
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .card h3 {
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            padding: 9px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .info-list strong {
+            color: var(--dark);
+        }
+
+        /* STATS */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .stat h3 {
+            font-size: 32px;
+            color: var(--primary);
+        }
+
+        .stat p {
+            color: #64748b;
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .skill-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        .bar {
+            height: 10px;
+            background: #e2e8f0;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 20px;
+        }
+
+        /* SERVICES */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .service {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-6px);
+        }
+
+        .service-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .service h3 {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        /* PROJECTS */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .project {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .project-top {
+            padding: 30px;
+            background: linear-gradient(135deg, #dbeafe, #ede9fe);
+        }
+
+        .project-top h3 {
+            color: var(--dark);
+            font-size: 21px;
+        }
+
+        .project-body {
+            padding: 25px;
+        }
+
+        .project-body p {
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eff6ff;
+            color: #1d4ed8;
+            padding: 4px 9px;
+            border-radius: 6px;
+            font-size: 12px;
+            margin: 3px;
+        }
+
+        /* WORKFLOW */
+
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .step {
+            background: white;
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            margin: auto auto 12px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* PRICING */
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .price-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 15px 0;
+        }
+
+        .price-card ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .price-card li {
+            padding: 7px 0;
+        }
+
+        /* FAQ */
+
+        .faq {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 18px;
+            border: none;
+            background: white;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 18px 18px;
+            color: #64748b;
+        }
+
+        .faq-answer.show {
+            display: block;
+        }
+
+        /* CONTACT */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 30px;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-item {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .contact-item strong {
+            display: block;
+            color: var(--dark);
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        form textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border-color: var(--primary);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: #cbd5e1;
+            margin: 5px 0;
+        }
+
+        /* WHATSAPP */
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 55px;
+            height: 55px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            box-shadow: var(--shadow);
+            z-index: 999;
+        }
+
+        /* DARK MODE */
+
+        body.dark {
+            --light: #020617;
+            --dark: #f8fafc;
+            --text: #cbd5e1;
+            --white: #0f172a;
+            --border: #1e293b;
+        }
+
+        body.dark nav,
+        body.dark .card,
+        body.dark .stat,
+        body.dark .service,
+        body.dark .project,
+        body.dark .step,
+        body.dark .price-card,
+        body.dark .faq-item,
+        body.dark .contact-box,
+        body.dark .profile-card {
+            background: #0f172a;
+        }
+
+        body.dark .faq-question {
+            background: #0f172a;
+            color: #f8fafc;
+        }
+
+        body.dark form input,
+        body.dark form textarea {
+            background: #020617;
+            color: white;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content,
+            .about-grid,
+            .contact-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .profile-card {
+                max-width: 400px;
+                margin: auto;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            section {
+                padding: 65px 0;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 70px 0;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .profile-photo {
+                width: 150px;
+                height: 150px;
+                font-size: 45px;
+            }
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-<nav>
-<div class="container nav-inner">
+    <nav>
+        <div class="container nav-container">
 
-<div class="logo">MW<span>N</span></div>
+            <a href="#home" class="logo">
+                Muhammad <span>Wajahat</span>
+            </a>
 
-<div class="nav-links">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#pricing">Packages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-<button class="theme-btn" onclick="toggleTheme()">🌙</button>
+            <button class="theme-btn" onclick="toggleTheme()">
+                🌙
+            </button>
 
-</div>
-</nav>
+        </div>
+    </nav>
 
 
-<!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
-<section class="hero" id="home">
+    <header class="hero" id="home">
 
-<div class="container hero-content">
+        <div class="container hero-content">
 
-<div>
+            <div>
 
-<div class="badge">Available for Web Projects</div>
+                <span class="badge">
+                    Available for Web Projects
+                </span>
 
-<h1>Hi, I'm <span>Muhammad Wajahat Nazir</span></h1>
+                <h1>
+                    Muhammad <span>Wajahat Nazir</span>
+                </h1>
 
-<h2>Web Developer | AI-Assisted Developer | Digital Solutions</h2>
+                <h2>
+                    Web Developer | AI-Assisted Developer | Digital Solutions
+                </h2>
 
-<p>
-I build modern, responsive and user-friendly websites and digital solutions.
-I combine web development with AI tools to create practical solutions for businesses,
-professionals and individuals.
-</p>
+                <p>
+                    I build professional, responsive and user-friendly websites
+                    using modern web technologies and AI-assisted development.
+                    My goal is to turn ideas into practical digital solutions.
+                </p>
 
-<p><strong>📍 Faisalabad, Pakistan</strong></p>
+                <div class="buttons">
 
-<div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        View My Work
+                    </a>
 
-<a href="#projects" class="btn btn-primary">View My Work</a>
-
-<a href="https://wa.me/923281210432" class="btn btn-outline">
-Contact on WhatsApp
-</a>
-
-</div>
-
-</div>
-
-<div class="profile">
-MWN
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>About Me</h2>
-
-<p>Professional introduction</p>
-
-</div>
-
-<div class="about-grid">
-
-<div class="card">
-
-<h3>Who I Am</h3>
-
-<p>
-I am Muhammad Wajahat Nazir, a Web Developer and AI-Assisted Developer
-based in Faisalabad, Pakistan.
-</p>
-
-<br>
-
-<p>
-My goal is to build useful, modern and reliable digital products that solve
-real-world problems. I use modern web technologies and AI-assisted development
-to improve productivity, quality and development speed.
-</p>
-
-<br>
-
-<p>
-I believe in continuous learning, practical work and building solutions
-that provide real value to clients.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>Personal Information</h3>
-
-<ul class="info-list">
-
-<li><strong>Name:</strong> Muhammad Wajahat Nazir</li>
-
-<li><strong>Location:</strong> Faisalabad, Pakistan</li>
-
-<li><strong>Profession:</strong> Web Developer</li>
-
-<li><strong>Specialization:</strong> AI-Assisted Development</li>
-
-<li><strong>Email:</strong> raimuhammadwajahatnazir@gmail.com</li>
-
-<li><strong>WhatsApp:</strong> 03281210432</li>
-
-<li><strong>Work:</strong> Remote / Online</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- STATS -->
-
-<section>
-
-<div class="container">
-
-<div class="stats">
-
-<div class="stat">
-<h3>10+</h3>
-<p>Projects & Concepts</p>
-</div>
-
-<div class="stat">
-<h3>5+</h3>
-<p>Core Technologies</p>
-</div>
-
-<div class="stat">
-<h3>100%</h3>
-<p>Learning Focus</p>
-</div>
-
-<div class="stat">
-<h3>24/7</h3>
-<p>Online Contact</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>My Skills</h2>
-
-<p>Technologies and capabilities</p>
-
-</div>
-
-<div class="card">
-
-<div class="skills-grid">
-
-<div>
-
-<div class="skill">
-<div class="skill-top">
-<span>HTML</span>
-<span>90%</span>
-</div>
-<div class="skill-bar">
-<div class="skill-fill" style="width:90%"></div>
-</div>
-</div>
-
-<div class="skill">
-<div class="skill-top">
-<span>CSS</span>
-<span>80%</span>
-</div>
-<div class="skill-bar">
-<div class="skill-fill" style="width:80%"></div>
-</div>
-</div>
-
-<div class="skill">
-<div class="skill-top">
-<span>JavaScript</span>
-<span>65%</span>
-</div>
-<div class="skill-bar">
-<div class="skill-fill" style="width:65%"></div>
-</div>
-</div>
-
-</div>
-
-
-<div>
-
-<div class="skill">
-<div class="skill-top">
-<span>Responsive Web Design</span>
-<span>85%</span>
-</div>
-<div class="skill-bar">
-<div class="skill-fill" style="width:85%"></div>
-</div>
-</div>
-
-<div class="skill">
-<div class="skill-top">
-<span>AI-Assisted Development</span>
-<span>75%</span>
-</div>
-<div class="skill-bar">
-<div class="skill-fill" style="width:75%"></div>
-</div>
-</div>
-
-<div class="skill">
-<div class="skill-top">
-<span>Problem Solving</span>
-<span>80%</span>
-</div>
-<div class="skill-bar">
-<div class="skill-fill" style="width:80%"></div>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SERVICES -->
-
-<section id="services">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Professional Services</h2>
-
-<p>Digital solutions for individuals and businesses</p>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-<div class="icon">🌐</div>
-<h3>Business Websites</h3>
-<p>Modern responsive websites for businesses, shops, academies and organizations.</p>
-</div>
-
-<div class="card">
-<div class="icon">👤</div>
-<h3>Portfolio Websites</h3>
-<p>Professional personal portfolios for freelancers, students and professionals.</p>
-</div>
-
-<div class="card">
-<div class="icon">🧮</div>
-<h3>Web Tools</h3>
-<p>Useful calculators, trackers and interactive browser-based tools.</p>
-</div>
-
-<div class="card">
-<div class="icon">🤖</div>
-<h3>AI Solutions</h3>
-<p>AI-assisted digital solutions designed to improve productivity and workflows.</p>
-</div>
-
-<div class="card">
-<div class="icon">📊</div>
-<h3>Dashboards</h3>
-<p>Clean and responsive dashboards for managing useful business information.</p>
-</div>
-
-<div class="card">
-<div class="icon">⚙️</div>
-<h3>Automation Concepts</h3>
-<p>Digital automation ideas that can reduce repetitive manual work.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Featured Projects</h2>
-
-<p>Practical projects and digital concepts</p>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-<div class="icon">💼</div>
-<h3>Professional Portfolio</h3>
-<p>A responsive personal portfolio website with professional sections and contact options.</p>
-</div>
-
-<div class="card">
-<div class="icon">🧮</div>
-<h3>Smart Calculator</h3>
-<p>Interactive calculator with multiple mathematical operations.</p>
-</div>
-
-<div class="card">
-<div class="icon">📋</div>
-<h3>Task Manager</h3>
-<p>A simple productivity tool concept for managing daily tasks.</p>
-</div>
-
-<div class="card">
-<div class="icon">💰</div>
-<h3>Expense Tracker</h3>
-<p>A web-based concept for tracking personal income and expenses.</p>
-</div>
-
-<div class="card">
-<div class="icon">🏫</div>
-<h3>Academy Management</h3>
-<p>A future-ready concept for managing students, classes and academy information.</p>
-</div>
-
-<div class="card">
-<div class="icon">🤖</div>
-<h3>AI Assistant Concept</h3>
-<p>An AI-powered assistant concept for answering questions and improving workflows.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- WORKFLOW -->
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>How I Work</h2>
-
-<p>Simple and professional client workflow</p>
-
-</div>
-
-<div class="workflow">
-
-<div class="step">
-<div class="step-number">1</div>
-<h3>Discuss</h3>
-<p>Understand your requirements and business problem.</p>
-</div>
-
-<div class="step">
-<div class="step-number">2</div>
-<h3>Plan</h3>
-<p>Create a clear solution and development plan.</p>
-</div>
-
-<div class="step">
-<div class="step-number">3</div>
-<h3>Build</h3>
-<p>Develop, test and improve the digital solution.</p>
-</div>
-
-<div class="step">
-<div class="step-number">4</div>
-<h3>Deliver</h3>
-<p>Deliver the final product and provide guidance.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- WHY ME -->
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Why Work With Me?</h2>
-
-<p>My approach to digital projects</p>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-<h3>🎯 Problem Focused</h3>
-<p>I focus on solving the actual problem instead of only writing code.</p>
-</div>
-
-<div class="card">
-<h3>🤖 AI Assisted</h3>
-<p>I use AI tools responsibly to improve development speed and productivity.</p>
-</div>
-
-<div class="card">
-<h3>📱 Responsive</h3>
-<p>Websites are designed to work across mobile, tablet and desktop screens.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PRICING -->
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Starter Packages</h2>
-
-<p>Illustrative packages — final pricing depends on project requirements</p>
-
-</div>
-
-<div class="grid">
-
-<div class="card price-card">
-
-<h3>Basic Website</h3>
-
-<div class="price">$50+</div>
-
-<ul>
-<li>✔ Responsive design</li>
-<li>✔ Up to 3 sections</li>
-<li>✔ Mobile friendly</li>
-<li>✔ Basic contact section</li>
-</ul>
-
-</div>
-
-
-<div class="card price-card">
-
-<h3>Professional Website</h3>
-
-<div class="price">$100+</div>
-
-<ul>
-<li>✔ Modern design</li>
-<li>✔ Multiple sections</li>
-<li>✔ Responsive layout</li>
-<li>✔ Interactive features</li>
-<li>✔ Contact integration</li>
-</ul>
-
-</div>
-
-
-<div class="card price-card">
-
-<h3>Custom Web Solution</h3>
-
-<div class="price">Custom</div>
-
-<ul>
-<li>✔ Business requirements</li>
-<li>✔ Web applications</li>
-<li>✔ Dashboards</li>
-<li>✔ AI-assisted features</li>
-<li>✔ Custom functionality</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FAQ -->
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Frequently Asked Questions</h2>
-
-<p>Common questions</p>
-
-</div>
-
-<div class="card">
-
-<div class="faq-item">
-
-<button class="faq-question" onclick="toggleFAQ(this)">
-What type of websites do you build?
-</button>
-
-<div class="faq-answer">
-I build responsive business websites, portfolio websites, web tools,
-dashboards and custom digital solutions.
-</div>
-
-</div>
-
-
-<div class="faq-item">
-
-<button class="faq-question" onclick="toggleFAQ(this)">
-Can you build websites for mobile users?
-</button>
-
-<div class="faq-answer">
-Yes. Websites are designed to work properly on mobile, tablet and desktop devices.
-</div>
-
-</div>
-
-
-<div class="faq-item">
-
-<button class="faq-question" onclick="toggleFAQ(this)">
-Do you use AI during development?
-</button>
-
-<div class="faq-answer">
-Yes. AI can assist with development, research, debugging and productivity,
-while the final solution is tested and reviewed.
-</div>
-
-</div>
-
-
-<div class="faq-item">
-
-<button class="faq-question" onclick="toggleFAQ(this)">
-How can I contact you?
-</button>
-
-<div class="faq-answer">
-You can contact me through WhatsApp or Email using the contact details below.
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact-section" id="contact">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Let's Work Together</h2>
-
-<p>Have a project or idea? Let's discuss it.</p>
-
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-info">
-
-<div class="contact-box">
-<h3>📱 WhatsApp</h3>
-<p>03281210432</p>
-<br>
-<a class="btn btn-primary" href="https://wa.me/923281210432">
-Message on WhatsApp
-</a>
-</div>
-
-<div class="contact-box">
-<h3>📧 Email</h3>
-<p>raimuhammadwajahatnazir@gmail.com</p>
-<br>
-<a class="btn btn-outline" href="mailto:raimuhammadwajahatnazir@gmail.com">
-Send Email
-</a>
-</div>
-
-<div class="contact-box">
-<h3>📍 Location</h3>
-<p>Faisalabad, Pakistan</p>
-</div>
-
-</div>
-
-
-<div class="contact-form">
-
-<h3>Send a Message</h3>
-
-<form onsubmit="sendMessage(event)">
-
-<input type="text" id="name" placeholder="Your Name" required>
-
-<input type="email" id="email" placeholder="Your Email" required>
-
-<textarea id="message" placeholder="Tell me about your project..." required></textarea>
-
-<button class="btn btn-primary" type="submit">
-Send Message
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="container">
-
-<h3>Muhammad Wajahat Nazir</h3>
-
-<p>Web Developer | AI-Assisted Developer | Digital Solutions</p>
-
-<div class="social">
-
-<a href="mailto:raimuhammadwajahatnazir@gmail.com">Email</a>
-
-<a href="https://wa.me/923281210432">WhatsApp</a>
-
-</div>
-
-<br>
-
-<p>© 2026 Muhammad Wajahat Nazir. All Rights Reserved.</p>
-
-</div>
-
-</footer>
-
-
-<!-- WHATSAPP FLOATING BUTTON -->
-
-<a class="whatsapp"
-href="https://wa.me/923281210432"
-target="_blank"
-title="Contact on WhatsApp">
-💬
-</a>
-
-
-<script>
-
-function toggleTheme(){
-
-document.body.classList.toggle("dark");
-
-}
-
-function toggleFAQ(button){
-
-let answer=button.nextElementSibling;
-
-answer.classList.toggle("show");
-
-}
-
-function sendMessage(event){
-
-event.preventDefault();
-
-let name=document.getElementById("name").value;
-
-let email=document.getElementById("email").value;
-
-let message=document.getElementById("message").value;
-
-let text=
-"Hello Muhammad Wajahat Nazir,%0A%0A"+
-"Name: "+encodeURIComponent(name)+"%0A"+
-"Email: "+encodeURIComponent(email)+"%0A"+
-"Message: "+encodeURIComponent(message);
-
-window.open(
-"https://wa.me/923281210432?text="+text,
-"_blank"
-);
-
-}
-
-</script>
-
-</body>
-</html>
+                    <a href="#contact" class="btn btn-outline">
+  
