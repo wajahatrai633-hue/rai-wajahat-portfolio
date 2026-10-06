@@ -4,647 +4,591 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Rai Wajahat Nazir - Professional Web Developer and AI Learner">
-<meta name="keywords" content="Web Developer, AI, Portfolio, Website Development">
-<meta name="author" content="Rai Wajahat Nazir">
+<title>Muhammad Wajahat Nazir | Web Developer & AI Solutions</title>
 
-<title>Rai Wajahat Nazir | Web Developer & AI Learner</title>
+<meta name="description" content="Muhammad Wajahat Nazir - Web Developer, AI-Assisted Developer and Digital Solutions professional from Faisalabad, Pakistan.">
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,sans-serif;
-background:#f5f7fb;
-color:#172033;
-line-height:1.6;
-transition:0.3s;
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-.container{
-width:90%;
-max-width:1150px;
-margin:auto;
-}
-
-nav{
-position:sticky;
-top:0;
-z-index:1000;
-background:rgba(255,255,255,.95);
-backdrop-filter:blur(10px);
-border-bottom:1px solid #e5e7eb;
-}
-
-.navbar{
-min-height:70px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-
-.logo{
-font-size:24px;
-font-weight:bold;
-}
-
-.logo span{
-color:#2563eb;
-}
-
-.nav-links{
-display:flex;
-gap:22px;
-list-style:none;
-}
-
-.nav-links a{
-font-weight:bold;
-}
-
-.nav-links a:hover{
-color:#2563eb;
-}
-
-.menu-btn{
-display:none;
-font-size:28px;
-cursor:pointer;
-}
-
-.hero{
-padding:100px 0 80px;
-background:linear-gradient(135deg,#eef4ff,#fff);
-}
-
-.hero-content{
-display:grid;
-grid-template-columns:1.3fr .7fr;
-align-items:center;
-gap:50px;
-}
-
-.badge{
-display:inline-block;
-padding:8px 15px;
-background:#dbeafe;
-color:#1d4ed8;
-border-radius:30px;
-font-weight:bold;
-margin-bottom:20px;
-}
-
-.hero h1{
-font-size:52px;
-line-height:1.1;
-margin-bottom:20px;
-}
-
-.hero h1 span{
-color:#2563eb;
-}
-
-.hero p{
-font-size:19px;
-color:#5b6475;
-margin-bottom:30px;
-}
-
-.buttons{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.btn{
-display:inline-block;
-padding:13px 22px;
-border-radius:10px;
-font-weight:bold;
-cursor:pointer;
-border:none;
-transition:.3s;
-}
-
-.btn-primary{
-background:#2563eb;
-color:white;
-}
-
-.btn-primary:hover{
-background:#1d4ed8;
-transform:translateY(-2px);
-}
-
-.btn-outline{
-border:2px solid #2563eb;
-color:#2563eb;
-background:white;
-}
-
-.btn-outline:hover{
-background:#2563eb;
-color:white;
-}
-
-.profile-card{
-background:white;
-padding:30px;
-border-radius:25px;
-text-align:center;
-box-shadow:0 20px 50px rgba(37,99,235,.15);
-}
-
-.avatar{
-width:180px;
-height:180px;
-border-radius:50%;
-margin:auto;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:55px;
-font-weight:bold;
-color:white;
-background:linear-gradient(135deg,#2563eb,#7c3aed);
-border:7px solid #eff6ff;
-}
-
-section{
-padding:80px 0;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:45px;
-}
-
-.section-title h2{
-font-size:36px;
-margin-bottom:10px;
-}
-
-.section-title p{
-color:#667085;
-}
-
-.about-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-}
-
-.box{
-background:white;
-padding:30px;
-border-radius:18px;
-box-shadow:0 8px 30px rgba(0,0,0,.06);
-}
-
-.box h3{
-margin-bottom:15px;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-}
-
-.stat{
-background:white;
-padding:25px;
-text-align:center;
-border-radius:16px;
-box-shadow:0 8px 25px rgba(0,0,0,.05);
-}
-
-.stat h3{
-font-size:32px;
-color:#2563eb;
-}
-
-.skills{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
-}
-
-.skill{
-margin-bottom:20px;
-}
-
-.skill-top{
-display:flex;
-justify-content:space-between;
-margin-bottom:7px;
-font-weight:bold;
-}
-
-.progress{
-height:10px;
-background:#e5e7eb;
-border-radius:20px;
-overflow:hidden;
-}
-
-.progress span{
-display:block;
-height:100%;
-background:linear-gradient(90deg,#2563eb,#7c3aed);
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-}
-
-.card{
-background:white;
-padding:28px;
-border-radius:18px;
-box-shadow:0 8px 30px rgba(0,0,0,.06);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-7px);
-box-shadow:0 15px 35px rgba(37,99,235,.13);
-}
-
-.card-icon{
-font-size:38px;
-margin-bottom:15px;
-}
-
-.card h3{
-margin-bottom:10px;
-}
-
-.card p{
-color:#667085;
-margin-bottom:20px;
-}
-
-.workflow{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-}
-
-.step{
-background:white;
-padding:25px;
-border-radius:16px;
-text-align:center;
-box-shadow:0 8px 25px rgba(0,0,0,.05);
-}
-
-.number{
-width:45px;
-height:45px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:#2563eb;
-color:white;
-border-radius:50%;
-margin:0 auto 15px;
-font-weight:bold;
-}
-
-.pricing{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-}
-
-.price-card{
-background:white;
-padding:30px;
-border-radius:18px;
-text-align:center;
-border:1px solid #e5e7eb;
-}
-
-.price-card.featured{
-border:2px solid #2563eb;
-transform:scale(1.03);
-}
-
-.price{
-font-size:35px;
-font-weight:bold;
-margin:20px 0;
-color:#2563eb;
-}
-
-.price-card ul{
-list-style:none;
-margin-bottom:25px;
-}
-
-.price-card li{
-margin:10px 0;
-}
-
-.faq{
-max-width:800px;
-margin:auto;
-}
-
-.faq-item{
-background:white;
-margin-bottom:12px;
-border-radius:12px;
-overflow:hidden;
-}
-
-.question{
-padding:18px;
-cursor:pointer;
-font-weight:bold;
-display:flex;
-justify-content:space-between;
-}
-
-.answer{
-display:none;
-padding:0 18px 18px;
-color:#667085;
-}
-
-.contact-section{
-background:#eef4ff;
-}
-
-.contact-grid{
-display:grid;
-grid-template-columns:.8fr 1.2fr;
-gap:30px;
-}
-
-.contact-info{
-background:linear-gradient(135deg,#1d4ed8,#4338ca);
-color:white;
-padding:35px;
-border-radius:20px;
-}
-
-.contact-info p{
-margin:18px 0;
-}
-
-.contact-form{
-background:#fff;
-padding:35px;
-border-radius:20px;
-box-shadow:0 10px 35px rgba(0,0,0,.07);
-}
-
-.form-group{
-margin-bottom:18px;
-}
-
-.form-group label{
-display:block;
-margin-bottom:7px;
-font-weight:bold;
-}
-
-.form-group input,
-.form-group textarea{
-width:100%;
-padding:13px;
-border:1px solid #d1d5db;
-border-radius:10px;
-outline:none;
-font-size:15px;
-}
-
-.form-group input:focus,
-.form-group textarea:focus{
-border-color:#2563eb;
-box-shadow:0 0 0 3px rgba(37,99,235,.1);
-}
-
-.form-group textarea{
-height:130px;
-resize:vertical;
-}
-
-footer{
-background:#111827;
-color:white;
-padding:30px 0;
-text-align:center;
-}
-
-footer p{
-color:#cbd5e1;
-}
-
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-width:55px;
-height:55px;
-border-radius:50%;
-background:#22c55e;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:26px;
-box-shadow:0 8px 25px rgba(0,0,0,.2);
-z-index:999;
+    font-family:Arial, sans-serif;
+    line-height:1.6;
+    background:#f7f9fc;
+    color:#172033;
 }
 
 body.dark{
-background:#0f172a;
-color:#e5e7eb;
+    background:#0f172a;
+    color:#e5e7eb;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#ffffff;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
 }
 
 body.dark nav{
-background:rgba(15,23,42,.95);
-border-color:#263244;
+    background:#111827;
 }
 
-body.dark .hero{
-background:linear-gradient(135deg,#111c35,#0f172a);
+.nav-inner{
+    min-height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
 }
 
-body.dark .hero p,
-body.dark .section-title p,
-body.dark .card p{
-color:#aeb8c8;
+.logo{
+    font-size:24px;
+    font-weight:bold;
 }
 
-body.dark .box,
-body.dark .card,
-body.dark .stat,
-body.dark .step,
-body.dark .price-card,
-body.dark .faq-item{
-background:#1e293b;
-color:#e5e7eb;
+.logo span{
+    color:#2563eb;
 }
 
-body.dark .contact-section{
-background:#172033;
+.nav-links{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
-body.dark .contact-form{
-background:#1e293b;
-color:white;
+.nav-links a{
+    font-weight:600;
+    font-size:14px;
 }
 
-body.dark .btn-outline{
-background:transparent;
-color:#60a5fa;
-}
-
-body.dark .form-group input,
-body.dark .form-group textarea{
-background:#0f172a;
-color:white;
-border-color:#334155;
+.nav-links a:hover{
+    color:#2563eb;
 }
 
 .theme-btn{
-border:none;
-background:#2563eb;
-color:white;
-padding:9px 13px;
-border-radius:8px;
-cursor:pointer;
-font-size:16px;
+    border:0;
+    background:#2563eb;
+    color:white;
+    padding:9px 13px;
+    border-radius:8px;
+    cursor:pointer;
 }
 
-@media(max-width:900px){
-
-.nav-links{
-display:none;
-position:absolute;
-top:70px;
-left:0;
-width:100%;
-background:white;
-flex-direction:column;
-padding:20px;
-border-bottom:1px solid #ddd;
-}
-
-body.dark .nav-links{
-background:#0f172a;
-}
-
-.nav-links.active{
-display:flex;
-}
-
-.menu-btn{
-display:inline;
-}
-
-.hero-content,
-.about-grid,
-.contact-grid{
-grid-template-columns:1fr;
-}
+/* HERO */
 
 .hero{
-padding:70px 0;
+    padding:90px 0;
+    background:linear-gradient(135deg,#eaf2ff,#ffffff);
+}
+
+body.dark .hero{
+    background:linear-gradient(135deg,#111827,#172554);
+}
+
+.hero-content{
+    display:grid;
+    grid-template-columns:1fr 320px;
+    align-items:center;
+    gap:50px;
+}
+
+.badge{
+    display:inline-block;
+    background:#dbeafe;
+    color:#1d4ed8;
+    padding:7px 14px;
+    border-radius:30px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+body.dark .badge{
+    background:#1e3a8a;
+    color:#dbeafe;
 }
 
 .hero h1{
-font-size:40px;
+    font-size:52px;
+    line-height:1.1;
+    margin-bottom:15px;
 }
 
-.cards,
-.pricing{
-grid-template-columns:1fr 1fr;
+.hero h1 span{
+    color:#2563eb;
 }
 
-.stats{
-grid-template-columns:1fr 1fr;
+.hero h2{
+    color:#475569;
+    margin-bottom:18px;
 }
 
-.workflow{
-grid-template-columns:1fr 1fr;
+body.dark .hero h2{
+    color:#cbd5e1;
 }
 
-.skills{
-grid-template-columns:1fr;
-}
-}
-
-@media(max-width:600px){
-
-.container{
-width:92%;
+.hero p{
+    max-width:650px;
+    font-size:18px;
+    margin-bottom:25px;
 }
 
-.hero h1{
-font-size:34px;
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
-.cards,
-.pricing,
-.stats,
-.workflow{
-grid-template-columns:1fr;
+.btn{
+    display:inline-block;
+    padding:12px 20px;
+    border-radius:8px;
+    font-weight:bold;
+    border:2px solid #2563eb;
 }
 
-.price-card.featured{
-transform:none;
+.btn-primary{
+    background:#2563eb;
+    color:white;
+}
+
+.btn-outline{
+    color:#2563eb;
+}
+
+.profile{
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:75px;
+    font-weight:bold;
+    margin:auto;
+    box-shadow:0 20px 50px rgba(37,99,235,.3);
+}
+
+/* SECTIONS */
+
+section{
+    padding:75px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
 }
 
 .section-title h2{
-font-size:30px;
+    font-size:35px;
+    margin-bottom:8px;
 }
+
+.section-title p{
+    color:#64748b;
+}
+
+body.dark .section-title p{
+    color:#94a3b8;
+}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+}
+
+.card{
+    background:white;
+    padding:28px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+body.dark .card{
+    background:#1e293b;
+}
+
+.info-list{
+    list-style:none;
+}
+
+.info-list li{
+    padding:9px 0;
+    border-bottom:1px solid #e5e7eb;
+}
+
+body.dark .info-list li{
+    border-bottom:1px solid #334155;
+}
+
+.info-list strong{
+    color:#2563eb;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat{
+    text-align:center;
+    padding:25px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+body.dark .stat{
+    background:#1e293b;
+}
+
+.stat h3{
+    font-size:35px;
+    color:#2563eb;
+}
+
+/* SKILLS */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.skill{
+    margin-bottom:20px;
+}
+
+.skill-top{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:7px;
+    font-weight:bold;
+}
+
+.skill-bar{
+    height:10px;
+    background:#e2e8f0;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.skill-fill{
+    height:100%;
+    background:#2563eb;
+}
+
+/* SERVICES / PROJECTS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.icon{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+/* WORKFLOW */
+
+.workflow{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.step{
+    text-align:center;
+    padding:25px;
+    background:#eff6ff;
+    border-radius:14px;
+}
+
+body.dark .step{
+    background:#172554;
+}
+
+.step-number{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 15px;
+    font-weight:bold;
+}
+
+/* PRICING */
+
+.price{
+    font-size:30px;
+    color:#2563eb;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.price-card ul{
+    list-style:none;
+}
+
+.price-card li{
+    padding:7px 0;
+}
+
+/* FAQ */
+
+.faq-item{
+    margin-bottom:12px;
+}
+
+.faq-question{
+    width:100%;
+    padding:17px;
+    text-align:left;
+    border:0;
+    background:#eaf2ff;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:8px;
+}
+
+body.dark .faq-question{
+    background:#1e293b;
+    color:white;
+}
+
+.faq-answer{
+    display:none;
+    padding:15px;
+}
+
+.faq-answer.show{
+    display:block;
+}
+
+/* CONTACT */
+
+.contact-section{
+    background:#eef4ff;
+}
+
+body.dark .contact-section{
+    background:#172033;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-form{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+}
+
+body.dark .contact-form{
+    background:#1e293b;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:14px;
+    border:1px solid #cbd5e1;
+    border-radius:7px;
+    font-size:15px;
+}
+
+textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-box{
+    padding:20px;
+    background:white;
+    border-radius:12px;
+}
+
+body.dark .contact-box{
+    background:#1e293b;
+}
+
+/* FOOTER */
+
+footer{
+    padding:30px;
+    text-align:center;
+    background:#111827;
+    color:white;
+}
+
+.social{
+    margin-top:12px;
+}
+
+.social a{
+    margin:0 7px;
+    color:#93c5fd;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#16a34a;
+    color:white;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+    z-index:999;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px){
+
+    .hero-content,
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        text-align:center;
+    }
+
+    .hero p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .workflow{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .nav-inner{
+        flex-direction:column;
+        padding:15px 0;
+    }
+}
+
+@media(max-width:550px){
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .grid,
+    .skills-grid,
+    .stats,
+    .workflow{
+        grid-template-columns:1fr;
+    }
+
+    .profile{
+        width:220px;
+        height:220px;
+        font-size:60px;
+    }
+
+    .nav-links{
+        justify-content:center;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
-<div class="container navbar">
+<div class="container nav-inner">
 
-<div class="logo">
-Rai <span>Wajahat</span>
+<div class="logo">MW<span>N</span></div>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </div>
 
-<ul class="nav-links" id="navLinks">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#pricing">Pricing</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-<div>
-<button class="theme-btn" onclick="toggleDark()">🌙</button>
-<span class="menu-btn" onclick="toggleMenu()">☰</span>
-</div>
+<button class="theme-btn" onclick="toggleTheme()">🌙</button>
 
 </div>
 </nav>
+
+
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -652,532 +596,598 @@ Rai <span>Wajahat</span>
 
 <div>
 
-<span class="badge">Available for Projects</span>
+<div class="badge">Available for Web Projects</div>
 
-<h1>
-Hi, I'm <span>Rai Wajahat Nazir</span>
-</h1>
+<h1>Hi, I'm <span>Muhammad Wajahat Nazir</span></h1>
 
-<h2>
-Web Developer & AI Learner
-</h2>
+<h2>Web Developer | AI-Assisted Developer | Digital Solutions</h2>
 
 <p>
-I build modern, responsive and user-friendly websites
-with the help of Web Development, AI tools and problem-solving.
+I build modern, responsive and user-friendly websites and digital solutions.
+I combine web development with AI tools to create practical solutions for businesses,
+professionals and individuals.
 </p>
 
-<div class="buttons">
+<p><strong>📍 Faisalabad, Pakistan</strong></p>
 
-<a href="#projects" class="btn btn-primary">
-View My Work
-</a>
+<div class="hero-buttons">
 
-<a href="#contact" class="btn btn-outline">
-Hire Me
+<a href="#projects" class="btn btn-primary">View My Work</a>
+
+<a href="https://wa.me/923281210432" class="btn btn-outline">
+Contact on WhatsApp
 </a>
 
 </div>
 
 </div>
 
-<div class="profile-card">
-
-<div class="avatar">
-RW
-</div>
-
-<h2 style="margin-top:20px;">
-Rai Wajahat Nazir
-</h2>
-
-<p>
-Web Development • AI • Digital Solutions
-</p>
-
+<div class="profile">
+MWN
 </div>
 
 </div>
+
 </section>
+
+
+<!-- ABOUT -->
 
 <section id="about">
 
 <div class="container">
 
 <div class="section-title">
+
 <h2>About Me</h2>
-<p>Who I am and what I do</p>
+
+<p>Professional introduction</p>
+
 </div>
 
 <div class="about-grid">
 
-<div class="box">
+<div class="card">
 
-<h3>My Journey</h3>
+<h3>Who I Am</h3>
 
 <p>
-I am learning modern Web Development with a practical,
-project-based approach. My goal is to create useful digital
-solutions for individuals, businesses and organizations.
+I am Muhammad Wajahat Nazir, a Web Developer and AI-Assisted Developer
+based in Faisalabad, Pakistan.
 </p>
 
 <br>
 
 <p>
-I combine Web Development with AI tools to work faster,
-solve problems and build better products.
-</p>
-
-</div>
-
-<div class="box">
-
-<h3>My Mission</h3>
-
-<p>
-My mission is simple: understand a real problem,
-design a useful solution, build it professionally,
-and deliver a website or web application that creates value.
+My goal is to build useful, modern and reliable digital products that solve
+real-world problems. I use modern web technologies and AI-assisted development
+to improve productivity, quality and development speed.
 </p>
 
 <br>
 
 <p>
-<strong>Learn → Build → Improve → Deliver</strong>
+I believe in continuous learning, practical work and building solutions
+that provide real value to clients.
 </p>
 
 </div>
 
+
+<div class="card">
+
+<h3>Personal Information</h3>
+
+<ul class="info-list">
+
+<li><strong>Name:</strong> Muhammad Wajahat Nazir</li>
+
+<li><strong>Location:</strong> Faisalabad, Pakistan</li>
+
+<li><strong>Profession:</strong> Web Developer</li>
+
+<li><strong>Specialization:</strong> AI-Assisted Development</li>
+
+<li><strong>Email:</strong> raimuhammadwajahatnazir@gmail.com</li>
+
+<li><strong>WhatsApp:</strong> 03281210432</li>
+
+<li><strong>Work:</strong> Remote / Online</li>
+
+</ul>
+
 </div>
 
 </div>
+
+</div>
+
 </section>
+
+
+<!-- STATS -->
 
 <section>
 
 <div class="container">
 
-<div class="section-title">
-<h2>Professional Dashboard</h2>
-<p>My current development journey</p>
-</div>
-
 <div class="stats">
 
 <div class="stat">
-<h3>6+</h3>
-<p>Months Learning Plan</p>
+<h3>10+</h3>
+<p>Projects & Concepts</p>
 </div>
 
 <div class="stat">
-<h3>10+</h3>
-<p>Project Ideas</p>
+<h3>5+</h3>
+<p>Core Technologies</p>
+</div>
+
+<div class="stat">
+<h3>100%</h3>
+<p>Learning Focus</p>
 </div>
 
 <div class="stat">
 <h3>24/7</h3>
-<p>Learning Mindset</p>
-</div>
-
-<div class="stat">
-<h3>AI+</h3>
-<p>Modern Workflow</p>
+<p>Online Contact</p>
 </div>
 
 </div>
 
 </div>
+
 </section>
+
+
+<!-- SKILLS -->
 
 <section id="skills">
 
 <div class="container">
 
 <div class="section-title">
+
 <h2>My Skills</h2>
-<p>Technologies and abilities I am developing</p>
+
+<p>Technologies and capabilities</p>
+
 </div>
 
-<div class="skills">
+<div class="card">
 
-<div class="box">
+<div class="skills-grid">
+
+<div>
 
 <div class="skill">
-
 <div class="skill-top">
 <span>HTML</span>
 <span>90%</span>
 </div>
-
-<div class="progress">
-<span style="width:90%"></span>
+<div class="skill-bar">
+<div class="skill-fill" style="width:90%"></div>
 </div>
-
 </div>
 
 <div class="skill">
-
 <div class="skill-top">
 <span>CSS</span>
 <span>80%</span>
 </div>
-
-<div class="progress">
-<span style="width:80%"></span>
+<div class="skill-bar">
+<div class="skill-fill" style="width:80%"></div>
 </div>
-
 </div>
 
 <div class="skill">
-
 <div class="skill-top">
 <span>JavaScript</span>
-<span>60%</span>
+<span>65%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:65%"></div>
+</div>
 </div>
 
-<div class="progress">
-<span style="width:60%"></span>
 </div>
 
-</div>
 
-</div>
-
-<div class="box">
+<div>
 
 <div class="skill">
-
 <div class="skill-top">
-<span>Responsive Design</span>
-<span>80%</span>
+<span>Responsive Web Design</span>
+<span>85%</span>
 </div>
-
-<div class="progress">
-<span style="width:80%"></span>
+<div class="skill-bar">
+<div class="skill-fill" style="width:85%"></div>
 </div>
-
 </div>
 
 <div class="skill">
-
 <div class="skill-top">
 <span>AI-Assisted Development</span>
 <span>75%</span>
 </div>
-
-<div class="progress">
-<span style="width:75%"></span>
+<div class="skill-bar">
+<div class="skill-fill" style="width:75%"></div>
 </div>
-
 </div>
 
 <div class="skill">
-
 <div class="skill-top">
 <span>Problem Solving</span>
-<span>75%</span>
+<span>80%</span>
 </div>
-
-<div class="progress">
-<span style="width:75%"></span>
+<div class="skill-bar">
+<div class="skill-fill" style="width:80%"></div>
 </div>
-
 </div>
 
 </div>
 
 </div>
+
 </div>
+
+</div>
+
 </section>
+
+
+<!-- SERVICES -->
 
 <section id="services">
 
 <div class="container">
 
 <div class="section-title">
-<h2>My Services</h2>
+
+<h2>Professional Services</h2>
+
 <p>Digital solutions for individuals and businesses</p>
+
 </div>
 
-<div class="cards">
+<div class="grid">
 
 <div class="card">
-<div class="card-icon">🌐</div>
-<h3>Business Website</h3>
-<p>
-Professional responsive websites for businesses,
-shops, academies and organizations.
-</p>
-<a href="#contact" class="btn btn-primary">Discuss Project</a>
+<div class="icon">🌐</div>
+<h3>Business Websites</h3>
+<p>Modern responsive websites for businesses, shops, academies and organizations.</p>
 </div>
 
 <div class="card">
-<div class="card-icon">💼</div>
-<h3>Portfolio Website</h3>
-<p>
-Modern personal portfolio websites for professionals,
-students and freelancers.
-</p>
-<a href="#contact" class="btn btn-primary">Discuss Project</a>
+<div class="icon">👤</div>
+<h3>Portfolio Websites</h3>
+<p>Professional personal portfolios for freelancers, students and professionals.</p>
 </div>
 
 <div class="card">
-<div class="card-icon">🤖</div>
+<div class="icon">🧮</div>
+<h3>Web Tools</h3>
+<p>Useful calculators, trackers and interactive browser-based tools.</p>
+</div>
+
+<div class="card">
+<div class="icon">🤖</div>
 <h3>AI Solutions</h3>
-<p>
-AI-assisted websites, tools and automation concepts
-for modern digital workflows.
-</p>
-<a href="#contact" class="btn btn-primary">Discuss Project</a>
+<p>AI-assisted digital solutions designed to improve productivity and workflows.</p>
+</div>
+
+<div class="card">
+<div class="icon">📊</div>
+<h3>Dashboards</h3>
+<p>Clean and responsive dashboards for managing useful business information.</p>
+</div>
+
+<div class="card">
+<div class="icon">⚙️</div>
+<h3>Automation Concepts</h3>
+<p>Digital automation ideas that can reduce repetitive manual work.</p>
 </div>
 
 </div>
 
 </div>
+
 </section>
+
+
+<!-- PROJECTS -->
 
 <section id="projects">
 
 <div class="container">
 
 <div class="section-title">
+
 <h2>Featured Projects</h2>
-<p>Examples of digital products I can build</p>
+
+<p>Practical projects and digital concepts</p>
+
 </div>
 
-<div class="cards">
+<div class="grid">
 
 <div class="card">
+<div class="icon">💼</div>
+<h3>Professional Portfolio</h3>
+<p>A responsive personal portfolio website with professional sections and contact options.</p>
+</div>
 
-<div class="card-icon">🧮</div>
-
+<div class="card">
+<div class="icon">🧮</div>
 <h3>Smart Calculator</h3>
-
-<p>
-Interactive calculator with multiple operations
-and responsive design.
-</p>
-
-<button class="btn btn-primary"
-onclick="calculator()">
-Open Demo
-</button>
-
+<p>Interactive calculator with multiple mathematical operations.</p>
 </div>
 
 <div class="card">
+<div class="icon">📋</div>
+<h3>Task Manager</h3>
+<p>A simple productivity tool concept for managing daily tasks.</p>
+</div>
 
-<div class="card-icon">📊</div>
-
+<div class="card">
+<div class="icon">💰</div>
 <h3>Expense Tracker</h3>
-
-<p>
-A simple web application concept for tracking
-income and expenses.
-</p>
-
-<button class="btn btn-primary"
-onclick="projectMessage('Expense Tracker')">
-View Project
-</button>
-
+<p>A web-based concept for tracking personal income and expenses.</p>
 </div>
 
 <div class="card">
-
-<div class="card-icon">🏫</div>
-
+<div class="icon">🏫</div>
 <h3>Academy Management</h3>
+<p>A future-ready concept for managing students, classes and academy information.</p>
+</div>
 
-<p>
-A future web application concept for students,
-teachers, fees and academic records.
-</p>
-
-<button class="btn btn-primary"
-onclick="projectMessage('Academy Management System')">
-View Project
-</button>
-
+<div class="card">
+<div class="icon">🤖</div>
+<h3>AI Assistant Concept</h3>
+<p>An AI-powered assistant concept for answering questions and improving workflows.</p>
 </div>
 
 </div>
 
 </div>
+
 </section>
+
+
+<!-- WORKFLOW -->
 
 <section>
 
 <div class="container">
 
 <div class="section-title">
+
 <h2>How I Work</h2>
-<p>A simple professional workflow</p>
+
+<p>Simple and professional client workflow</p>
+
 </div>
 
 <div class="workflow">
 
 <div class="step">
-<div class="number">1</div>
-<h3>Understand</h3>
-<p>Understand your business and requirements.</p>
+<div class="step-number">1</div>
+<h3>Discuss</h3>
+<p>Understand your requirements and business problem.</p>
 </div>
 
 <div class="step">
-<div class="number">2</div>
+<div class="step-number">2</div>
 <h3>Plan</h3>
-<p>Plan the structure, design and features.</p>
+<p>Create a clear solution and development plan.</p>
 </div>
 
 <div class="step">
-<div class="number">3</div>
+<div class="step-number">3</div>
 <h3>Build</h3>
-<p>Develop and test the website or application.</p>
+<p>Develop, test and improve the digital solution.</p>
 </div>
 
 <div class="step">
-<div class="number">4</div>
+<div class="step-number">4</div>
 <h3>Deliver</h3>
-<p>Launch the final product and provide support.</p>
+<p>Deliver the final product and provide guidance.</p>
 </div>
 
 </div>
 
 </div>
+
 </section>
 
-<section id="pricing">
 
-<div class="container">
-
-<div class="section-title">
-<h2>Starter Packages</h2>
-<p>Example packages — final price depends on project requirements</p>
-</div>
-
-<div class="pricing">
-
-<div class="price-card">
-
-<h3>Basic</h3>
-
-<div class="price">$50+</div>
-
-<ul>
-<li>✓ 1 Page Website</li>
-<li>✓ Responsive Design</li>
-<li>✓ Basic Contact Section</li>
-<li>✓ Basic Support</li>
-</ul>
-
-<a href="#contact" class="btn btn-primary">
-Choose
-</a>
-
-</div>
-
-<div class="price-card featured">
-
-<h3>Professional</h3>
-
-<div class="price">$100+</div>
-
-<ul>
-<li>✓ Multi-Section Website</li>
-<li>✓ Mobile Responsive</li>
-<li>✓ Modern UI</li>
-<li>✓ Basic JavaScript</li>
-<li>✓ Deployment Support</li>
-</ul>
-
-<a href="#contact" class="btn btn-primary">
-Choose
-</a>
-
-</div>
-
-<div class="price-card">
-
-<h3>Custom</h3>
-
-<div class="price">Custom</div>
-
-<ul>
-<li>✓ Web Application</li>
-<li>✓ Advanced Features</li>
-<li>✓ API Integration</li>
-<li>✓ AI Features</li>
-<li>✓ Custom Requirements</li>
-</ul>
-
-<a href="#contact" class="btn btn-primary">
-Discuss
-</a>
-
-</div>
-
-</div>
-
-</div>
-</section>
+<!-- WHY ME -->
 
 <section>
 
 <div class="container">
 
 <div class="section-title">
-<h2>Frequently Asked Questions</h2>
-<p>Common questions</p>
-</div>
 
-<div class="faq">
+<h2>Why Work With Me?</h2>
 
-<div class="faq-item">
-
-<div class="question" onclick="toggleFAQ(this)">
-Can you build a website for my business?
-<span>+</span>
-</div>
-
-<div class="answer">
-Yes. A website can be designed according to your
-business, services, customers and requirements.
-</div>
+<p>My approach to digital projects</p>
 
 </div>
 
-<div class="faq-item">
+<div class="grid">
 
-<div class="question" onclick="toggleFAQ(this)">
-Will the website work on mobile?
-<span>+</span>
+<div class="card">
+<h3>🎯 Problem Focused</h3>
+<p>I focus on solving the actual problem instead of only writing code.</p>
 </div>
 
-<div class="answer">
-Yes. The website is designed to be responsive,
-meaning it can adjust to mobile, tablet and desktop screens.
+<div class="card">
+<h3>🤖 AI Assisted</h3>
+<p>I use AI tools responsibly to improve development speed and productivity.</p>
 </div>
 
-</div>
-
-<div class="faq-item">
-
-<div class="question" onclick="toggleFAQ(this)">
-Can AI be added to a website?
-<span>+</span>
-</div>
-
-<div class="answer">
-Yes. AI features such as chat assistants, automation
-and intelligent tools can be added depending on the project.
+<div class="card">
+<h3>📱 Responsive</h3>
+<p>Websites are designed to work across mobile, tablet and desktop screens.</p>
 </div>
 
 </div>
 
 </div>
 
-</div>
 </section>
+
+
+<!-- PRICING -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Starter Packages</h2>
+
+<p>Illustrative packages — final pricing depends on project requirements</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card price-card">
+
+<h3>Basic Website</h3>
+
+<div class="price">$50+</div>
+
+<ul>
+<li>✔ Responsive design</li>
+<li>✔ Up to 3 sections</li>
+<li>✔ Mobile friendly</li>
+<li>✔ Basic contact section</li>
+</ul>
+
+</div>
+
+
+<div class="card price-card">
+
+<h3>Professional Website</h3>
+
+<div class="price">$100+</div>
+
+<ul>
+<li>✔ Modern design</li>
+<li>✔ Multiple sections</li>
+<li>✔ Responsive layout</li>
+<li>✔ Interactive features</li>
+<li>✔ Contact integration</li>
+</ul>
+
+</div>
+
+
+<div class="card price-card">
+
+<h3>Custom Web Solution</h3>
+
+<div class="price">Custom</div>
+
+<ul>
+<li>✔ Business requirements</li>
+<li>✔ Web applications</li>
+<li>✔ Dashboards</li>
+<li>✔ AI-assisted features</li>
+<li>✔ Custom functionality</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Frequently Asked Questions</h2>
+
+<p>Common questions</p>
+
+</div>
+
+<div class="card">
+
+<div class="faq-item">
+
+<button class="faq-question" onclick="toggleFAQ(this)">
+What type of websites do you build?
+</button>
+
+<div class="faq-answer">
+I build responsive business websites, portfolio websites, web tools,
+dashboards and custom digital solutions.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question" onclick="toggleFAQ(this)">
+Can you build websites for mobile users?
+</button>
+
+<div class="faq-answer">
+Yes. Websites are designed to work properly on mobile, tablet and desktop devices.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question" onclick="toggleFAQ(this)">
+Do you use AI during development?
+</button>
+
+<div class="faq-answer">
+Yes. AI can assist with development, research, debugging and productivity,
+while the final solution is tested and reviewed.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question" onclick="toggleFAQ(this)">
+How can I contact you?
+</button>
+
+<div class="faq-answer">
+You can contact me through WhatsApp or Email using the contact details below.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
 
 <section class="contact-section" id="contact">
 
@@ -1187,9 +1197,7 @@ and intelligent tools can be added depending on the project.
 
 <h2>Let's Work Together</h2>
 
-<p>
-Have a project idea? Let's discuss it.
-</p>
+<p>Have a project or idea? Let's discuss it.</p>
 
 </div>
 
@@ -1197,68 +1205,46 @@ Have a project idea? Let's discuss it.
 
 <div class="contact-info">
 
-<h2>Contact Me</h2>
-
-<p>📧 Email: your-email@example.com</p>
-
-<p>📱 WhatsApp: Your Number</p>
-
-<p>🌍 Available for Remote Projects</p>
-
+<div class="contact-box">
+<h3>📱 WhatsApp</h3>
+<p>03281210432</p>
 <br>
+<a class="btn btn-primary" href="https://wa.me/923281210432">
+Message on WhatsApp
+</a>
+</div>
 
-<p>
-Tell me about your idea, business or website
-requirement. I'll help you understand the best solution.
-</p>
+<div class="contact-box">
+<h3>📧 Email</h3>
+<p>raimuhammadwajahatnazir@gmail.com</p>
+<br>
+<a class="btn btn-outline" href="mailto:raimuhammadwajahatnazir@gmail.com">
+Send Email
+</a>
+</div>
+
+<div class="contact-box">
+<h3>📍 Location</h3>
+<p>Faisalabad, Pakistan</p>
+</div>
 
 </div>
+
 
 <div class="contact-form">
 
+<h3>Send a Message</h3>
+
 <form onsubmit="sendMessage(event)">
 
-<div class="form-group">
+<input type="text" id="name" placeholder="Your Name" required>
 
-<label>Your Name</label>
+<input type="email" id="email" placeholder="Your Email" required>
 
-<input
-type="text"
-id="name"
-placeholder="Enter your name"
-required>
+<textarea id="message" placeholder="Tell me about your project..." required></textarea>
 
-</div>
-
-<div class="form-group">
-
-<label>Email</label>
-
-<input
-type="email"
-id="email"
-placeholder="Enter your email"
-required>
-
-</div>
-
-<div class="form-group">
-
-<label>Project Details</label>
-
-<textarea
-id="message"
-placeholder="Tell me about your project..."
-required></textarea>
-
-</div>
-
-<button
-type="submit"
-class="btn btn-primary">
-
+<button class="btn btn-primary" type="submit">
 Send Message
-
 </button>
 
 </form>
@@ -1268,107 +1254,60 @@ Send Message
 </div>
 
 </div>
+
 </section>
+
+
+<!-- FOOTER -->
 
 <footer>
 
 <div class="container">
 
-<h3>Rai Wajahat Nazir</h3>
+<h3>Muhammad Wajahat Nazir</h3>
 
-<p>
-Web Developer • AI Learner • Digital Problem Solver
-</p>
+<p>Web Developer | AI-Assisted Developer | Digital Solutions</p>
 
-<p style="margin-top:10px;">
-© 2026 Rai Wajahat Nazir. All Rights Reserved.
-</p>
+<div class="social">
+
+<a href="mailto:raimuhammadwajahatnazir@gmail.com">Email</a>
+
+<a href="https://wa.me/923281210432">WhatsApp</a>
+
+</div>
+
+<br>
+
+<p>© 2026 Muhammad Wajahat Nazir. All Rights Reserved.</p>
 
 </div>
 
 </footer>
 
-<a
-class="whatsapp"
-href="#contact"
-title="Contact Me">
 
+<!-- WHATSAPP FLOATING BUTTON -->
+
+<a class="whatsapp"
+href="https://wa.me/923281210432"
+target="_blank"
+title="Contact on WhatsApp">
 💬
-
 </a>
+
 
 <script>
 
-function toggleMenu(){
+function toggleTheme(){
 
-document
-.getElementById("navLinks")
-.classList
-.toggle("active");
+document.body.classList.toggle("dark");
 
 }
 
-function toggleDark(){
+function toggleFAQ(button){
 
-document
-.body
-.classList
-.toggle("dark");
+let answer=button.nextElementSibling;
 
-}
-
-function toggleFAQ(element){
-
-let answer =
-element.nextElementSibling;
-
-if(answer.style.display === "block"){
-
-answer.style.display="none";
-
-element.querySelector("span").textContent="+";
-
-}else{
-
-answer.style.display="block";
-
-element.querySelector("span").textContent="−";
-
-}
-
-}
-
-function projectMessage(project){
-
-alert(
-project +
-" demo is being prepared. This project can be developed as a real web application."
-);
-
-}
-
-function calculator(){
-
-let a =
-prompt("Enter first number:");
-
-let b =
-prompt("Enter second number:");
-
-if(a === null || b === null){
-
-return;
-
-}
-
-a = Number(a);
-b = Number(b);
-
-let result = a + b;
-
-alert(
-"Addition Result: " + result
-);
+answer.classList.toggle("show");
 
 }
 
@@ -1376,49 +1315,24 @@ function sendMessage(event){
 
 event.preventDefault();
 
-let name =
-document.getElementById("name").value;
+let name=document.getElementById("name").value;
 
-let email =
-document.getElementById("email").value;
+let email=document.getElementById("email").value;
 
-let message =
-document.getElementById("message").value;
+let message=document.getElementById("message").value;
 
-if(
-name.trim()==="" ||
-email.trim()==="" ||
-message.trim()===""
-){
+let text=
+"Hello Muhammad Wajahat Nazir,%0A%0A"+
+"Name: "+encodeURIComponent(name)+"%0A"+
+"Email: "+encodeURIComponent(email)+"%0A"+
+"Message: "+encodeURIComponent(message);
 
-alert("Please complete all fields.");
-
-return;
-
-}
-
-alert(
-"Thank you " +
-name +
-"! Your message has been prepared successfully."
+window.open(
+"https://wa.me/923281210432?text="+text,
+"_blank"
 );
 
 }
-
-document
-.querySelectorAll(".nav-links a")
-.forEach(function(link){
-
-link.addEventListener("click",function(){
-
-document
-.getElementById("navLinks")
-.classList
-.remove("active");
-
-});
-
-});
 
 </script>
 
